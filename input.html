@@ -11,62 +11,77 @@
 <nav>
     <div class="navbar-inverse">
         <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="nav-collapse collapse">
-                <div class="navbar-brand">BooshApp</div>
-                <ul class="nav navbar-nav">
-                    <li> <a href="#">Search</a></li>
-                    <li> <a href="#">Input</a></li>
-                </ul>
-            </div>
+            
+                <a class="navbar-brand">BooshApp</a>
+
         </div>
     </div>
 </nav>
 <!--END NAVIGATION-->
-<section>
+<div class="jumbotron">
+  <div class="container">
+  <h1>Search This SHIT</h1>
+  <p>You know you want to</p>
+  <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Anything">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Submit</button>
+            </span>
+        </input>
+    </div>
+  </div>
+</div>
+
+<section >
     <div class="container">
+    <h1 style="color:#fff;">Or add something</h1>
         <div class="row">
             <div class="col-lg-4 col-sm-4">
-                <div class="input">
-                    <img src="images/band.jpg">
-                    <h3>Band Input</h3>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Band Name">
-                              <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">Submit</button>
-                              </span>
-                        </input>
+                <div class="well">
+                    <div class="input">
+                        <img src="images/band.jpg">
+                        <h3>Band Input</h3>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Band Name">
+                                  <span class="input-group-btn">
+                                    <button id="band_input" class="btn btn-default" type="button">Submit</button>
+                                  </span>
+                            </input>
+                        </div>
                     </div>
-                </div>
+                </div>    
             </div>
+                
             <div class="col-lg-4 col-sm-4">
-                <div class="input">
-                    <img src="images/event.jpg">
-                    <h3>Event Input</h3>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Event Name">
-                              <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">Submit</button>
-                              </span>
-                        </input>
+            
+                <div class="well">
+                    <div class="input">
+                        <img src="images/event.jpg">
+                        <h3>Event Input</h3>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Event Name"></input>
+                            <input type="text" class="form-control" placeholder="Event Date"></input>
+                            <button style="width:100%;" id="event_input" class="btn btn-default" type="button">Submit</button>
+                        </div>
                     </div>
-                </div>
+                </div>   
             </div>
+
+                
             <div class="col-lg-4 col-sm-4">
-                <div class="input">
-                    <img src="images/venue.jpg">
-                    <h3>Venue Input</h3>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Event Name">
-                              <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">Submit</button>
-                              </span>
-                        </input>
-                    </div>
+                
+                <div class="well">
+                    <div class="input">
+                        <img src="images/venue.jpg">
+                        <h3>Venue Input</h3>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Venue Name">
+                                  <span class="input-group-btn">
+                                    <button id="venue_input" class="btn btn-default" type="button">Submit</button>
+                                  </span>
+                            </input>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </div>
