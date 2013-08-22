@@ -11,7 +11,7 @@
 <nav>
     <div class="navbar-inverse">
         <div class="container">
-            
+
                 <a class="navbar-brand">BooshApp</a>
 
         </div>
@@ -23,18 +23,19 @@
   <h1>Search This SHIT</h1>
   <p>You know you want to</p>
   <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Anything">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Submit</button>
-            </span>
-        </input>
+    <form action="app/results.php" method="get">
+        <form action="app/results.php" method="post">
+            <input type="text" name="search" class="form-control" placeholder="Search Anything">
+            <input style="width:100%;" id="search_input" class="btn btn-default" type="submit" value="submit"> 
+        </form>
+    </form>
     </div>
   </div>
 </div>
 
 <section >
     <div class="container">
-    <h1 style="color:#fff;">Or add something</h1>
+    <h1 style="color:#fff;">Or add something...</h1>
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <div class="well">
@@ -42,18 +43,34 @@
                         <img src="images/band.jpg">
                         <h3>Band Input</h3>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Band Name">
-                                  <span class="input-group-btn">
-                                    <button id="band_input" class="btn btn-default" type="button">Submit</button>
-                                  </span>
-                            </input>
+                            <form action="app/band.php" method="post">
+                                <input type="text" name="band_name" class="form-control" placeholder="Band Name">
+                                <input style="width:100%;" id="band_input" class="btn btn-default" type="submit" value="submit"> 
+                            </form>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
-                
+
+           
             <div class="col-lg-4 col-sm-4">
-            
+
+                <div class="well">
+                    <div class="input">
+                        <img src="images/venue.jpg">
+                        <h3>Venue Input</h3>
+                        <div class="input-group">
+                            <form action="app/venue.php" method="post">
+                                <input type="text" name="venue_name" class="form-control" placeholder="Venue Name">
+                                <input style="width:100%;" id="venue_input" class="btn btn-default" type="submit" value="submit"> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-4 col-sm-4">
+
                 <div class="well">
                     <div class="input">
                         <img src="images/event.jpg">
@@ -64,26 +81,10 @@
                             <button style="width:100%;" id="event_input" class="btn btn-default" type="button">Submit</button>
                         </div>
                     </div>
-                </div>   
-            </div>
-
-                
-            <div class="col-lg-4 col-sm-4">
-                
-                <div class="well">
-                    <div class="input">
-                        <img src="images/venue.jpg">
-                        <h3>Venue Input</h3>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Venue Name">
-                                  <span class="input-group-btn">
-                                    <button id="venue_input" class="btn btn-default" type="button">Submit</button>
-                                  </span>
-                            </input>
-                        </div>
-                    </div>    
                 </div>
             </div>
+
+
         </div>
     </div>
 </section>
