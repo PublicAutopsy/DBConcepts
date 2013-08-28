@@ -58,9 +58,9 @@ $sqlGetVenues = <<<SQL
 SQL;
 
 
-
+//Running the query and storing the results
 if(!$result = $db->query($sqlGetBands)){
-	die('<li>Error Posting to database ['.$db->error."]</li></ul>");
+	die('<li>Error Posting to database ['.$db->error."]</li></ul>");//ending the operation if there is a connection error
 } else {
 	echo "<h2>BANDS</h2>";
 	echo "<table class='table table-striped table-bordered'>";

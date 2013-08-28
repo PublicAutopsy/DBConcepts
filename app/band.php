@@ -3,7 +3,7 @@
 <?php 
 
 	echo ($_POST[band_name]); 
-
+	//$db is the element containing the location of the mysql database
 	$db = new mysqli('localhost', 'root', 'root', "boosh");
 
 	if( $db->connect_errno > 0){
