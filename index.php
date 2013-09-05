@@ -96,48 +96,28 @@ $sqlGetVenues = <<<SQL
     SELECT * FROM venues
 SQL;
 ?>
-<?php
 
-//Running the query and storing the results
-if(!$result = $db->query($sqlGetBands)){
-    die('<li>Error Posting to database ['.$db->error."]</li></ul>");//ending the operation if there is a connection error
-} else {
-    echo "<h2>BANDS</h2>";
-    echo "<table class='table table-striped table-bordered'>";
-    echo "<tr> <th>ID</th> <th> Name </th> </tr>";
-    while($row = $result->fetch_assoc() ){
-        echo "<tr><td>".$row['band_id']."</td><td>".$row['band_name']."</td></tr>"; 
-    }
-    echo "</table>";
-}  
-
-?>
-<?php
-
-if(!$result = $db->query($sqlGetVenues)){
-    die('<li>Error Posting to database ['.$db->error."]</li></ul>");
-} else {
-
-    echo "<h2>VENUES</h2>";
-    echo "<table  class='table table-striped table-bordered'>";
-    echo "<tr> <th>ID</th> <th> Name </th> </tr>";
-
-    while($row = $result->fetch_assoc() ){
-        echo "<tr><td>".$row['venue_id']."</td><td>".$row['venue_name']."</td></tr>";   
-    }
-    echo "</table>";
-}  
-
- ?>
-                            <select name="Bands" id="band_select"></select>
-                            <select name="Venues" id="venue_select">
+                            <select name="Bands" id="band_select">
                                 <?php
-                                    if(!$result = $db->query($sqlGetVenues)){
-                                        die('<li>Error Posting to database ['.$db->error."]</li></ul>");
+                                    if(!$result = $db->query($sqlGetBands)){
+                                       
                                     } else {
 
                                         while($row = $result->fetch_assoc() ){
-                                        echo "<option value='".$row['venue_id']."'> ".$row['venue_name']."</option>";   
+                                            echo "<option value=' ".$row['band_id']." '> ".$row['band_name']."</option>";  
+                                        } 
+                                    }
+                                 ?>
+                            </select>
+                            <select name="Venues" id="venue_select">
+                                <?php
+                                    if(!$result = $db->query($sqlGetVenues)){
+                                       
+                                    } else {
+
+                                        while($row = $result->fetch_assoc() ){
+                                            echo "<option value='".$row['venue_id']."'> ".$row['venue_name']."</option>";  
+                                        } 
                                     }
                                  ?>
                             </select>
