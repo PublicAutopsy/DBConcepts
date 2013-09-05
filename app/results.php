@@ -56,8 +56,18 @@ $sqlGetVenues = <<<SQL
 	SELECT * FROM venues
 SQL;
 
-$sqlGetEvents = <<<SQL
+/*$sqlGetEvents = <<<SQL
   SELECT * FROM events
+SQL;*/
+
+$sqlGetEvents = <<<SQL
+
+SELECT bands.*, venues.*, events.*
+FROM events
+    JOIN bands
+        ON bands.band_id = events.band_id
+    JOIN venues
+        ON venues.venue_id = events.venue_id
 SQL;
 
 
@@ -95,10 +105,10 @@ if(!$result = $db->query($sqlGetEvents)){
 
     echo "<h2>EVENTS</h2>";
     echo "<table  class='table table-striped table-bordered'>";
-    echo "<tr> <th> Name </th> <th> Date </th> <th> Band ID </th> <th> Venue ID </th></tr>";
+    echo "<tr> <th> Event </th> <th> Date </th> <th> Band </th> <th> Venue </th></tr>";
 
     while($row = $result->fetch_assoc() ){
-        echo "<tr><td>".$row['event_name']."</td><td>".$row['event_date']."</td><td>".$row['band_id']."</td><td>".$row['venue_id']."</td></tr>";
+        echo "<tr><td>".$row['event_name']."</td><td>".$row['event_date']."</td><td>".$row['band_name']."</td><td>".$row['venue_name']."</td></tr>";
     }
     echo "</table>";
 }
