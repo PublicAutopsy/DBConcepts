@@ -13,16 +13,19 @@
 	}
 //setting up the database to insert venue name into venues
 $sql = <<<SQL
-	INSERT INTO  venues (
-	venue_name 
+	INSERT INTO  events (
+	event_name,
+	event_date,
+	band_id,
+	venue_id,
 	)
 	VALUES (
-	 '$_POST[venue_name]'
+	 '$_POST[event_name]'
 	);
 SQL;
 //setting up the query to pull venues from database
 $sqlGet = <<<SQL
-	SELECT * FROM venues
+	SELECT * FROM events
 SQL;
 
 

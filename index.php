@@ -59,7 +59,7 @@
                         <h3>Venue Input</h3>
                         <div class="input-group">
                             <form action="app/venue.php" method="post">
-                                <input type="text" name="venue_name" class="form-control" placeholder="Venue Name">
+                                <input type="text" name="venue_name"class="form-control" placeholder="Venue Name">
                                 <input style="width:100%;" id="venue_input" class="btn btn-default" type="submit" value="submit"> 
                             </form>
                         </div>
