@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="46" selection-start="2329" selection-end="2329" vertical-scroll-proportion="0.31733745">
+            <state line="52" column="11" selection-start="1827" selection-end="1827" vertical-scroll-proportion="-2.826087">
               <folding>
                 <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#DOCTYPE#0;n#!!top" expanded="true" />
               </folding>
@@ -65,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venue.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="venue.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/venue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="547" selection-end="641" vertical-scroll-proportion="0.3043478">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,9 +99,9 @@
         <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/app/results.php" />
         <option value="$PROJECT_DIR$/app/band.php" />
-        <option value="$PROJECT_DIR$/app/venue.php" />
         <option value="$PROJECT_DIR$/app/event.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/venue.php" />
       </list>
     </option>
   </component>
@@ -375,13 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/venue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="547" selection-end="641" vertical-scroll-proportion="0.3043478">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="24" selection-start="729" selection-end="729" vertical-scroll-proportion="0.3043478">
@@ -398,10 +391,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="46" selection-start="2329" selection-end="2329" vertical-scroll-proportion="0.31733745">
+        <state line="52" column="11" selection-start="1827" selection-end="1827" vertical-scroll-proportion="-2.826087">
           <folding>
             <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#DOCTYPE#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/venue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>

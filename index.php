@@ -74,8 +74,8 @@
                         <img src="images/event.jpg">
                         <h3>Event Input</h3>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Event Name"></input>
-                            <input type="text" class="form-control" placeholder="Event Date"></input>
+                            <input type="text" name="event_name" class="form-control" placeholder="Event Name"></input>
+                            <input type="text" name="event_date" class="form-control" placeholder="Event Date"></input>
                             <?php 
 
     // echo ($_POST[band_name]); 
@@ -97,7 +97,7 @@ $sqlGetVenues = <<<SQL
 SQL;
 ?>
 
-                            <select name="Bands" id="band_select">
+                            <select name="band_id" id="band_select">
                                 <?php
                                     if(!$result = $db->query($sqlGetBands)){
                                        
@@ -109,7 +109,7 @@ SQL;
                                     }
                                  ?>
                             </select>
-                            <select name="Venues" id="venue_select">
+                            <select name="venue_id" id="venue_select">
                                 <?php
                                     if(!$result = $db->query($sqlGetVenues)){
                                        
