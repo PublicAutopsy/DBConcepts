@@ -73,7 +73,7 @@
                     <div class="input">
                         <img src="images/event.jpg">
                         <h3>Event Input</h3>
-                        <div class="input-group">
+                        <form action="app/venue.php" method="post">
                             <input type="text" name="event_name" class="form-control" placeholder="Event Name"></input>
                             <input type="text" name="event_date" class="form-control" placeholder="Event Date"></input>
                             <?php 
@@ -121,8 +121,8 @@ SQL;
                                     }
                                  ?>
                             </select>
-                            <button style="width:100%;" id="event_input" class="btn btn-default" type="button">Submit</button>
-                        </div>
+                            <input style="width:100%;" id="event_input" class="btn btn-default" type="submit" value="submit">
+                        </form>
                     </div>
                 </div>
             </div>

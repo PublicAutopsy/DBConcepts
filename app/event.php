@@ -21,6 +21,9 @@ $sql = <<<SQL
 	)
 	VALUES (
 	 '$_POST[event_name]'
+	 '$_POST[event_date]'
+	 '$_POST[band_id]'
+	 '$_POST[venue_id]'
 	);
 SQL;
 //setting up the query to pull venues from database
@@ -34,20 +37,9 @@ SQL;
 		die('<li>Error Posting to database ['.$db->error."]</li></ul>");//ending the posting of information into the database if error is dected
 	} else {
 		echo("<li>Post Successful</li></ul>");//printing the statment that the input into the database was successful
-	}  
+	}
 // }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
 // 	echo "</ul>";
 // }
 
  ?>
-
-	<?php 
-
-	// if(!$result = $db->query($sqlGet)){
-	// 	die('<li>Error Posting to database ['.$db->error."]</li></ul>");
-	// } else {
-	// 	while($row = $result->fetch_assoc() ){
-	// 		echo "<tr><td>".$row['first_name']."</td><td>".$row['last_name']."</td><td><a href='mailto:".$row['email']."''>".$row['email']."</a></td>";	
-	// 	}
-	// }  
-	 ?>
