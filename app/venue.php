@@ -1,6 +1,5 @@
-
-<?php
-    header("Location: ../index.php");
+<?php header("Location: ../index.php"); ?>
+    <?php
 
 	echo ($_POST[band_name]);
 
@@ -14,7 +13,7 @@
 	}
 //setting up the database to insert venue name into venues
 $sql = <<<SQL
-	INSERT INTO  events (
+	INSERT INTO  venues (
 	venue_name 
 	)
 	VALUES (

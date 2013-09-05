@@ -95,7 +95,7 @@ if(!$result = $db->query($sqlGetEvents)){
 
     echo "<h2>EVENTS</h2>";
     echo "<table  class='table table-striped table-bordered'>";
-    echo "<tr> <th> Name </th> <th> Date </th> <th> ID </th> <th> ID </th></tr>";
+    echo "<tr> <th> Name </th> <th> Date </th> <th> Band ID </th> <th> Venue ID </th></tr>";
 
     while($row = $result->fetch_assoc() ){
         echo "<tr><td>".$row['event_name']."</td><td>".$row['event_date']."</td><td>".$row['band_id']."</td><td>".$row['venue_id']."</td></tr>";
