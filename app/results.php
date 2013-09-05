@@ -37,8 +37,7 @@
     		<div class="well">
     			
 
-<?php 
-
+<?php
 	// echo ($_POST[band_name]); 
 
 	$db = new mysqli('localhost', 'root', 'root', "boosh");

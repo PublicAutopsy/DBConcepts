@@ -1,6 +1,8 @@
+<?php
+
+    header("Location: ../index.php");
 
 
-<?php 
 
 	echo ($_POST[band_name]); 
 	//$db is the element containing the location of the mysql database

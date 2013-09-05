@@ -1,6 +1,7 @@
 
 
-<?php 
+<?php
+    header("Location: ../index.php");
 
 	echo ($_POST[band_name]); 
 	//creating a connection to the database 
