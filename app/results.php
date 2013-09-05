@@ -56,6 +56,11 @@ $sqlGetVenues = <<<SQL
 	SELECT * FROM venues
 SQL;
 
+$sqlGetEvents = <<<SQL
+  SELECT * FROM events
+SQL;
+
+
 
 //Running the query and storing the results
 if(!$result = $db->query($sqlGetBands)){
@@ -82,9 +87,23 @@ if(!$result = $db->query($sqlGetVenues)){
 		echo "<tr><td>".$row['venue_id']."</td><td>".$row['venue_name']."</td></tr>";	
 	}
 	echo "</table>";
-}  
+}
 
- ?>
+if(!$result = $db->query($sqlGetEvents)){
+    die('<li>Error Posting to database ['.$db->error."]</li></ul>");
+} else {
+
+    echo "<h2>EVENTS</h2>";
+    echo "<table  class='table table-striped table-bordered'>";
+    echo "<tr> <th> Name </th> <th> Date </th> <th> ID </th> <th> ID </th></tr>";
+
+    while($row = $result->fetch_assoc() ){
+        echo "<tr><td>".$row['event_name']."</td><td>".$row['event_date']."</td><td>".$row['band_id']."</td><td>".$row['venue_id']."</td></tr>";
+    }
+    echo "</table>";
+}
+
+?>
 
     		</div>
     		

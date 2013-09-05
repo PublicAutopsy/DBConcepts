@@ -1,11 +1,13 @@
+<?php header("Location: ../index.php"); ?>
+
+<?php
 
 
-<?php 
 
-	echo ($_POST[band_name]); 
+	echo ($_POST[band_name]);
 	//creating a connection to the database 
 	$db = new mysqli('localhost', 'root', 'root', "boosh");
-	//the if statement is testing for connection errors 
+	//the if statement is testing for connection errors
 	if( $db->connect_errno > 0){
 		die('Unable to connect ['.$db->connect_error."]");//ending the connection to database if error is detected
 	} else {
@@ -17,15 +19,17 @@ $sql = <<<SQL
 	event_name,
 	event_date,
 	band_id,
-	venue_id,
+	venue_id
 	)
 	VALUES (
-	 '$_POST[event_name]'
-	 '$_POST[event_date]'
-	 '$_POST[band_id]'
+	 '$_POST[event_name]',
+	 '$_POST[event_date]',
+	 '$_POST[band_id]',
 	 '$_POST[venue_id]'
 	);
 SQL;
+
+echo $sql;
 //setting up the query to pull venues from database
 $sqlGet = <<<SQL
 	SELECT * FROM events
