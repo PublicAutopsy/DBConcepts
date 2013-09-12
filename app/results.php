@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../css/styles.css" rel="stylesheet" media="screen">
+    <style>
+        form{
+            height: 0px;
+        }
+    </style>
 </head>
 <body>
 <!--NAVIGATION-->
@@ -66,9 +71,9 @@ if(!$result = $db->query($sqlGetBands)){
 } else {
 	echo "<h2>BANDS</h2>";
 	echo "<table class='table table-striped table-bordered'>";
-	echo "<tr><th>Band Name </th> </tr>";
+	echo "<tr><th>Band Name </th> <th> Delete </th></tr>";
 	while($row = $result->fetch_assoc() ){
-		echo "<tr><td>".$row['band_name']."</td></tr>";	
+		echo "<tr><td>".$row['band_name']."</td><td><form method='get' action='./delete.php'><input type='submit' value='DELETE'><input name='id' type='hidden' value=".$row['band_id']."><input name='type' type='hidden' value='band'></form></td></tr>";
 	}
 	echo "</table>";
 }  
@@ -79,10 +84,10 @@ if(!$result = $db->query($sqlGetVenues)){
 
 	echo "<h2>VENUES</h2>";
 	echo "<table  class='table table-striped table-bordered'>";
-	echo "<tr><th>Venue Name </th> </tr>";
+	echo "<tr><th>Venue Name </th> <th> Delete </th></tr>";
 
 	while($row = $result->fetch_assoc() ){
-		echo "<tr><td>".$row['venue_name']."</td></tr>";	
+		echo "<tr><td>".$row['venue_name']."</td><td><form method='get' action='./delete.php'><input type='submit' value='DELETE'><input name='id' type='hidden' value=".$row['venue_id']."><input name='type' type='hidden' value='venue'></form></td></tr>";
 	}
 	echo "</table>";
 }
@@ -93,10 +98,10 @@ if(!$result = $db->query($sqlGetEvents)){
 
     echo "<h2>EVENTS</h2>";
     echo "<table  class='table table-striped table-bordered'>";
-    echo "<tr> <th> Event </th> <th> Date </th> <th> Band </th> <th> Venue </th></tr>";
+    echo "<tr> <th> Event </th> <th> Date </th> <th> Band </th> <th> Venue </th><th> Delete </th></tr>";
 
     while($row = $result->fetch_assoc() ){
-        echo "<tr><td>".$row['event_name']."</td><td>".$row['event_date']."</td><td>".$row['band_name']."</td><td>".$row['venue_name']."</td></tr>";
+        echo "<tr><td>".$row['event_name']."</td><td>".$row['event_date']."</td><td>".$row['band_name']."</td><td>".$row['venue_name']."</td><td><form method='get' action='./delete.php'><input type='submit' value='DELETE'><input name='id' type='hidden' value=".$row['event_id']."><input name='type' type='hidden' value='event'></form></td></tr>";
     }
     echo "</table>";
 }
