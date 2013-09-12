@@ -46,11 +46,11 @@
 
 
 $sqlGetBands = <<<SQL
-	SELECT * FROM bands WHERE band_name LIKE '$query'
+	SELECT * FROM bands WHERE band_name RLIKE '$query'
 SQL;
 
 $sqlGetVenues = <<<SQL
-	SELECT * FROM venues WHERE venue_name LIKE '$query'
+	SELECT * FROM venues WHERE venue_name RLIKE '$query'
 SQL;
 
 $sqlGetEvents = <<<SQL
@@ -60,7 +60,7 @@ FROM events
         ON bands.band_id = events.band_id
     JOIN venues
         ON venues.venue_id = events.venue_id
-    WHERE band_name LIKE '$query' OR venue_name LIKE '$query' OR event_name LIKE '$query'
+    WHERE band_name RLIKE '$query' OR venue_name RLIKE '$query' OR event_name RLIKE '$query'
 SQL;
 
 
