@@ -12,6 +12,10 @@
     <div class="navbar-inverse">
         <div class="container">
                 <a href="../" class="navbar-brand">BooshApp</a>
+                <form class="navbar-form navbar-right pull-right" action="./results.php" method="get">
+                    <input type="text" name="search" class="form-control" style="width:auto;" placeholder="Search Anything">
+                    <input id="search_input" class="btn btn-default" type="submit" value="submit">
+                </form>
         </div>
     </div>
 </nav>
