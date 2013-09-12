@@ -11,25 +11,11 @@
 <nav>
     <div class="navbar-inverse">
         <div class="container">
-
-                <a class="navbar-brand">BooshApp</a>
-
+                <a href="../" class="navbar-brand">BooshApp</a>
         </div>
     </div>
 </nav>
 <!--END NAVIGATION-->
-<div class="jumbotron">
-  <div class="container">
-  <h1>Search This SHIT</h1>
-  <p>You know you want to</p>
-  <div class="input-group">
-        <form action="./results.php" method="post">
-            <input type="text" name="search" class="form-control" placeholder="Search Anything">
-            <input style="width:100%;" id="search_input" class="btn btn-default" type="submit" value="submit"> 
-        </form>
-    </div>
-  </div>
-</div>
 <section >
     <div class="container">
     	<div class="row">
@@ -47,27 +33,25 @@
 	} else {
 	}
 
+    $query = $_GET["search"];
+
 
 $sqlGetBands = <<<SQL
-	SELECT * FROM bands
+	SELECT * FROM bands WHERE band_name LIKE '$query'
 SQL;
 
 $sqlGetVenues = <<<SQL
-	SELECT * FROM venues
+	SELECT * FROM venues WHERE venue_name LIKE '$query'
 SQL;
 
-/*$sqlGetEvents = <<<SQL
-  SELECT * FROM events
-SQL;*/
-
 $sqlGetEvents = <<<SQL
-
 SELECT bands.*, venues.*, events.*
 FROM events
     JOIN bands
         ON bands.band_id = events.band_id
     JOIN venues
         ON venues.venue_id = events.venue_id
+    WHERE band_name LIKE '$query' OR venue_name LIKE '$query' OR event_name LIKE '$query'
 SQL;
 
 
@@ -78,9 +62,9 @@ if(!$result = $db->query($sqlGetBands)){
 } else {
 	echo "<h2>BANDS</h2>";
 	echo "<table class='table table-striped table-bordered'>";
-	echo "<tr> <th>ID</th> <th> Name </th> </tr>";
+	echo "<tr><th>Band Name </th> </tr>";
 	while($row = $result->fetch_assoc() ){
-		echo "<tr><td>".$row['band_id']."</td><td>".$row['band_name']."</td></tr>";	
+		echo "<tr><td>".$row['band_name']."</td></tr>";	
 	}
 	echo "</table>";
 }  
@@ -91,10 +75,10 @@ if(!$result = $db->query($sqlGetVenues)){
 
 	echo "<h2>VENUES</h2>";
 	echo "<table  class='table table-striped table-bordered'>";
-	echo "<tr> <th>ID</th> <th> Name </th> </tr>";
+	echo "<tr><th>Venue Name </th> </tr>";
 
 	while($row = $result->fetch_assoc() ){
-		echo "<tr><td>".$row['venue_id']."</td><td>".$row['venue_name']."</td></tr>";	
+		echo "<tr><td>".$row['venue_name']."</td></tr>";	
 	}
 	echo "</table>";
 }

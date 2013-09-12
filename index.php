@@ -11,14 +11,14 @@
 <nav>
     <div class="navbar-inverse">
         <div class="container">
-                <a class="navbar-brand">BooshApp</a>
+                <a href="#" class="navbar-brand">BooshApp</a>
         </div>
     </div>
 </nav>
 <!--END NAVIGATION-->
 <div class="jumbotron">
   <div class="container">
-  <h1>Search This SHIT</h1>
+  <h1>Anything</h1>
   <p>You know you want to</p>
   <div class="input-group">
     <form action="app/results.php" method="get">
