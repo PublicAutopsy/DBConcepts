@@ -18,7 +18,7 @@
 <!--END NAVIGATION-->
 <div class="jumbotron">
   <div class="container">
-  <h1>Anything</h1>
+  <h1>Search for anything</h1>
   <p>You know you want to</p>
   <div class="input-group">
     <form action="app/results.php" method="get">
